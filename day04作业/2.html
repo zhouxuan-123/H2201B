@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .daBox{
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+        }
+        .item{
+            width: 100px;
+            height: 50px;
+            float: left;
+            margin-right: 10px;
+            border: 1px solid #aaa;
+    } */
+    </style>
+</head>
+<body>
+    <!-- <div class="daBox">
+        <h2>点击切换颜色</h2>
+        <p>——————————————————————</p>
+        <div class="items">
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+        </div>
+    </div> -->
+    <script>
+        // 声明变量（变量不能重复提升）
+        // let a;
+        // let b,c,d;
+        // let e = 100;
+        // let f = 521,g='love',h=[]
+        // let a;
+        // let b,c,d;
+        // let e = 100;
+        // let f = 521,g='love',h=[]
+        // let a;
+        // let b,c,d;
+        // let e = 100;
+        // let f = 521,g='love',h=[]
+        // // 2.块级作用域 全局，函数，eveal
+        // {
+        //     let girl = '啊啊啊'
+        // }
+        // let girl = '嗯嗯'
+        // console.log(girl);
+        // {
+        //     let girl = '啊啊啊'
+        // }
+        // let girl = '嗯嗯'
+        // console.log(girl);
+        // {
+        //     let girl = '啊啊啊'
+        // }
+        // let girl = '嗯嗯'
+        // console.log(girl);
+        // // 3.不存在变量提升
+        // console.log(song);
+        // let song = '嚯嚯嚯'
+        // console.log(song);
+        // let song = '嚯嚯嚯'
+        // console.log(song);
+        // let song = '嚯嚯嚯'
+
+
+        // const F4 = ['易烊千玺','王俊凯','王源','鹿晗']
+        // let [a,c,d,e]=F4
+        // let f = F4[0]
+        // console.log(d);
+        // const F4 = ['易烊千玺','王俊凯','王源','鹿晗']
+        // let [a,c,d,e]=F4
+        // let f = F4[0]
+        // console.log(d);
+        // const F4 = ['易烊千玺','王俊凯','王源','鹿晗']
+        // let [a,c,d,e]=F4
+        // let f = F4[0]
+        // console.log(d);
+
+        // const ZZ = {
+        //     name:'啊啊啊',
+        //     age:11,
+        //     job:function(){
+        //         console.log('嗯嗯嗯');
+        //     }
+        // }
+        // let {name} = ZZ
+        // console.log(name);
+
+        // const ZZ = {
+        //     name:'啊啊啊',
+        //     age:11,
+        //     job:function(){
+        //         console.log('嗯嗯嗯');
+        //     }
+        // }
+        // let {name} = ZZ
+        // console.log(name);
+
+        // const ZZ = {
+        //     name:'啊啊啊',
+        //     age:11,
+        //     job:function(){
+        //         console.log('嗯嗯嗯');
+        //     }
+        // }
+        // let {name} = ZZ
+        // console.log(name);
+
+
+        // let resulta = '<ul>'
+        //     +'<li>沈腾</li>'
+        //     +'<li>玛丽</li>'
+        //     +'</ul>'
+        // let eat = `
+        //     <ul>
+        //         <li>奥奥</li>
+        //         <li>嗯嗯</li>
+        //         <li>啊啊</li>
+        //         <li>霍霍</li>
+        //     </ul>
+        // `
+        // document.write(resulta)
+        // document.write(eat)
+
+        // let resulta = '<ul>'
+        //     +'<li>沈腾</li>'
+        //     +'<li>玛丽</li>'
+        //     +'</ul>'
+        // let eat = `
+        //     <ul>
+        //         <li>奥奥</li>
+        //         <li>嗯嗯</li>
+        //         <li>啊啊</li>
+        //         <li>霍霍</li>
+        //     </ul>
+        // `
+        // document.write(resulta)
+        // document.write(eat)
+
+        // let resulta = '<ul>'
+        //     +'<li>沈腾</li>'
+        //     +'<li>玛丽</li>'
+        //     +'</ul>'
+        // let eat = `
+        //     <ul>
+        //         <li>奥奥</li>
+        //         <li>嗯嗯</li>
+        //         <li>啊啊</li>
+        //         <li>霍霍</li>
+        //     </ul>
+        // `
+        // document.write(resulta)
+        // document.write(eat)
+
+
+        // let name = "高薪"
+        // let hope = function(){
+        //     console.log('啊啊啊啊啊啊啊');
+        // }
+        // const Person={
+        //     name,
+        //     hope
+        // }
+
+        // let name = "高薪"
+        // let hope = function(){
+        //     console.log('啊啊啊啊啊啊啊');
+        // }
+        // const Person={
+        //     name,
+        //     hope
+        // }
+
+        // let name = "高薪"
+        // let hope = function(){
+        //     console.log('啊啊啊啊啊啊啊');
+        // }
+        // const Person={
+        //     name,
+        //     hope
+        // }
+
+
+        // function getName(){
+        //     console.log(this.name);
+        // }
+        // let getName2=()=>{
+        //     console.log(this.name);
+        // }
+        // window.name = '啊'
+        // const school = {
+        //     name:"AAAAA"
+        // }
+        // getName()
+        // getName2()
+        // getName.call(school)
+        // getName2.call(school)
+
+        // function getName(){
+        //     console.log(this.name);
+        // }
+        // let getName2=()=>{
+        //     console.log(this.name);
+        // }
+        // window.name = '啊'
+        // const school = {
+        //     name:"AAAAA"
+        // }
+        // getName()
+        // getName2()
+        // getName.call(school)
+        // getName2.call(school)
+
+        // function getName(){
+        //     console.log(this.name);
+        // }
+        // let getName2=()=>{
+        //     console.log(this.name);
+        // }
+        // window.name = '啊'
+        // const school = {
+        //     name:"AAAAA"
+        // }
+        // getName()
+        // getName2()
+        // getName.call(school)
+        // getName2.call(school)
+
+
+        // ES5获取实参的方式
+        // function date(){
+        //     console.log(arguments);
+        // }
+        // date('奥奥','啊啊','嗯嗯')
+        // // rest 参数
+        // function date(...args){
+        //     console.log(args);
+        // }
+        // date('奥奥','啊啊','嗯嗯')
+        // // rest 参数必须要放到参数后面
+        // function fn(a,b,...args){
+        //     console.log(a);
+        //     console.log(b);
+        //     console.log(args);
+        // }
+        // fn(1,2,3,4,5)
+
+        // ES5获取实参的方式
+        // function date(){
+        //     console.log(arguments);
+        // }
+        // date('奥奥','啊啊','嗯嗯')
+        // // rest 参数
+        // function date(...args){
+        //     console.log(args);
+        // }
+        // date('奥奥','啊啊','嗯嗯')
+        // // rest 参数必须要放到参数后面
+        // function fn(a,b,...args){
+        //     console.log(a);
+        //     console.log(b);
+        //     console.log(args);
+        // }
+        // fn(1,2,3,4,5)
+
+        // ES5获取实参的方式
+        // function date(){
+        //     console.log(arguments);
+        // }
+        // date('奥奥','啊啊','嗯嗯')
+        // // rest 参数
+        // function date(...args){
+        //     console.log(args);
+        // }
+        // date('奥奥','啊啊','嗯嗯')
+        // // rest 参数必须要放到参数后面
+        // function fn(a,b,...args){
+        //     console.log(a);
+        //     console.log(b);
+        //     console.log(args);
+        // }
+        // fn(1,2,3,4,5)
+
+
+        
+        // 1.数组的合并
+        // const kuaizi = ['奥奥','啊啊']
+        // const fenghuang = ['啦啦','嗯嗯']
+        // const allArray = [...kuaizi,...fenghuang]
+        // const allArray1 = kuaizi.concat(fenghuang)
+        // // 2.数组的克隆
+        // const sanzhihua = ['Z','X','C']
+        // const sanyecao = [...sanzhihua]
+        // // 3.将伪数组转为真正的数组
+        // const dives = document.querySelectorAll('div')
+        // const diveArr = [...divs]
+        // console.log(divArr);
+
+        // 1.数组的合并
+        // const kuaizi = ['奥奥','啊啊']
+        // const fenghuang = ['啦啦','嗯嗯']
+        // const allArray = [...kuaizi,...fenghuang]
+        // const allArray1 = kuaizi.concat(fenghuang)
+        // // 2.数组的克隆
+        // const sanzhihua = ['Z','X','C']
+        // const sanyecao = [...sanzhihua]
+        // // 3.将伪数组转为真正的数组
+        // const dives = document.querySelectorAll('div')
+        // const diveArr = [...divs]
+        // console.log(divArr);
+
+        // 1.数组的合并
+        // const kuaizi = ['奥奥','啊啊']
+        // const fenghuang = ['啦啦','嗯嗯']
+        // const allArray = [...kuaizi,...fenghuang]
+        // const allArray1 = kuaizi.concat(fenghuang)
+        // // 2.数组的克隆
+        // const sanzhihua = ['Z','X','C']
+        // const sanyecao = [...sanzhihua]
+        // // 3.将伪数组转为真正的数组
+        // const dives = document.querySelectorAll('div')
+        // const diveArr = [...divs]
+        // console.log(divArr);
+
+
+
+        // let s = Symbol()
+        // let s2 = Symbol('啊啊啊')
+        // let S3 = Symbol('嗯嗯嗯')
+        // let s4 = Symbol.for('哈哈哈')
+        // let S5 = Symbol.for('啦啦啦')
+        // console.log(s,s2,s3,s4,s5);
+        // let result = s +s
+
+        // let s = Symbol()
+        // let s2 = Symbol('啊啊啊')
+        // let S3 = Symbol('嗯嗯嗯')
+        // let s4 = Symbol.for('哈哈哈')
+        // let S5 = Symbol.for('啦啦啦')
+        // console.log(s,s2,s3,s4,s5);
+        // let result = s +s
+
+        let s = Symbol()
+        let s2 = Symbol('啊啊啊')
+        let S3 = Symbol('嗯嗯嗯')
+        let s4 = Symbol.for('哈哈哈')
+        let S5 = Symbol.for('啦啦啦')
+        console.log(s,s2,s3,s4,s5);
+        let result = s +s
+    </script>
+</body>
+</html>
