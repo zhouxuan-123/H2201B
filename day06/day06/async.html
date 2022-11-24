@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            // async await
+        function timeout(){
+            return "aaaaaa"
+        }
+        async function eee(){
+            let eee = await timeout()
+            console.log(res);
+        }
+
+        function fn1(){
+            return 10
+        }
+        function fn2(num){
+            return 10+num
+        }
+        function fn3(num){
+            return 10+num
+        }
+        function fn4(num){
+            return 10+num
+        }
+        function fn5(num){
+            return 10+num
+        }
+        async function fn6(){
+            let res = await fn1()
+            res = await fn2(res)
+            res = await fn3(res)
+            res = await fn4(res)
+            res = await fn5(res)
+            console.log(res);
+        }
+
+
+
+
+        const getPeach = `哈哈哈哈哈哈哈哈哈`
+        const getAgent = `啊啊啊啊啊啊啊啊啊`
+        const getTroop = `嘿嘿嘿嘿嘿嘿嘿嘿嘿`
+        function getPeach(){
+            return new Promise(function(resolve,reject)=>
+                setInterval(()=>{
+                    resolve(getPeachs)
+                })
+            )
+        }
+        async function getTroop(){
+            console.log('啦啦啦啦');
+            let result = await getPeach()
+            console.log(result);
+        }
+        getTroop()
+    </script>
+</body>
+</html>
