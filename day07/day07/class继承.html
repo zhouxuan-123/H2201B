@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // es5的写法
+        // function Per(x,y){
+        //     this.x = x
+        //     this.y = y
+        // }
+        // Per.prototype.toString = function(){
+        //     return '(' + this.x + ',' + this.y + ')'
+        // }
+        // var prototype = new Per(6,8)
+        // let res = p.toString()
+        // console.log(p);
+        // console.log(p.toString());
+
+        // es6的写法
+        // class Pers{
+        //     constructor(x,y){
+        //         this.x = x
+        //         this.y = y
+        //     }
+        //     tostring(){
+        //         return '(' + this.x +',' +this.y + ')'
+        //     }
+        // }
+        // let p = new Pers(3,6)
+        // let result = p.tostring()
+        // console.log(p);
+        // console.log(p.tostring());
+
+        // es5的写法
+        // function Per(x,y){
+        //     this.x = x
+        //     this.y = y
+        // }
+        // Per.prototype.toString = function(){
+        //     return '(' + this.x + ',' + this.y + ')'
+        // }
+        // var prototype = new Per(6,8)
+        // let res = p.toString()
+        // console.log(p);
+        // console.log(p.toString());
+
+        // es6的写法
+        // class Pers{
+        //     constructor(x,y){
+        //         this.x = x
+        //         this.y = y
+        //     }
+        //     tostring(){
+        //         return '(' + this.x +',' +this.y + ')'
+        //     }
+        // }
+        // let p = new Pers(3,6)
+        // let result = p.tostring()
+        // console.log(p);
+        // console.log(p.tostring());
+
+        // es5的写法
+        // function Per(x,y){
+        //     this.x = x
+        //     this.y = y
+        // }
+        // Per.prototype.toString = function(){
+        //     return '(' + this.x + ',' + this.y + ')'
+        // }
+        // var prototype = new Per(6,8)
+        // let res = p.toString()
+        // console.log(p);
+        // console.log(p.toString());
+
+        // es6的写法
+        // class Pers{
+        //     constructor(x,y){
+        //         this.x = x
+        //         this.y = y
+        //     }
+        //     tostring(){
+        //         return '(' + this.x +',' +this.y + ')'
+        //     }
+        // }
+        // let p = new Pers(3,6)
+        // let result = p.tostring()
+        // console.log(p);
+        // console.log(p.tostring());
+
+
+        // function Phone (a,b){
+        //     this.a = a
+        //     this.b = b
+        // }
+        // Phone.prototype.call = function(){
+        //     console.log('嗯嗯');
+        // }
+        // function See (a,b,c,d){
+        //     Phone.call(this,a,b)
+        //     this.c = c
+        //     this.d = d
+        // }
+        // See.prototype = new Phone()
+        // See.prototype.constructor = See
+        // See.prototype.res = function(){
+        //     console.log('啊啊');
+        // }
+        // See.prototype.play = function(){
+        //     console.log('嘿嘿');
+        // }
+        // const aaa = new See('嚯嚯',11,'啦啦','12')
+        // console.log(aaa);
+
+        // function Phone (a,b){
+        //     this.a = a
+        //     this.b = b
+        // }
+        // Phone.prototype.call = function(){
+        //     console.log('嗯嗯');
+        // }
+        // function See (a,b,c,d){
+        //     Phone.call(this,a,b)
+        //     this.c = c
+        //     this.d = d
+        // }
+        // See.prototype = new Phone()
+        // See.prototype.constructor = See
+        // See.prototype.res = function(){
+        //     console.log('啊啊');
+        // }
+        // See.prototype.play = function(){
+        //     console.log('嘿嘿');
+        // }
+        // const aaa = new See('嚯嚯',11,'啦啦','12')
+        // console.log(aaa);
+
+        function Phone (a,b){
+            this.a = a
+            this.b = b
+        }
+        Phone.prototype.call = function(){
+            console.log('嗯嗯');
+        }
+        function See (a,b,c,d){
+            Phone.call(this,a,b)
+            this.c = c
+            this.d = d
+        }
+        See.prototype = new Phone()
+        See.prototype.constructor = See
+        See.prototype.res = function(){
+            console.log('啊啊');
+        }
+        See.prototype.play = function(){
+            console.log('嘿嘿');
+        }
+        const aaa = new See('嚯嚯',11,'啦啦','12')
+        console.log(aaa);
+    </script>
+</body>
+</html>

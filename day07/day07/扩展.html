@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // EPSILON属性
+        // function equal(a,b){
+        //     if(Math.abs(a-b)<Number.EPSILON){
+        //         return true
+        //     }else{
+        //         return false
+        //     }
+        // }
+        // console.log(01+02 ===0.3);
+        // console.log(equal(0.1+0.2,0.3));
+        // // 二进制
+        // let b = 0b1010
+        // let o = 0o777
+        // // 十进制
+        // let d = 100
+        // let x = 0xff
+
+        // console.log(Number.isFinite(100));
+        // console.log(Number.isFinite(100/0));
+        // console.log(Number.isFinite(Infinity));
+
+        // EPSILON属性
+        // function equal(a,b){
+        //     if(Math.abs(a-b)<Number.EPSILON){
+        //         return true
+        //     }else{
+        //         return false
+        //     }
+        // }
+        // console.log(01+02 ===0.3);
+        // console.log(equal(0.1+0.2,0.3));
+        // // 二进制
+        // let b = 0b1010
+        // let o = 0o777
+        // // 十进制
+        // let d = 100
+        // let x = 0xff
+
+        // console.log(Number.isFinite(100));
+        // console.log(Number.isFinite(100/0));
+        // console.log(Number.isFinite(Infinity));
+
+        // EPSILON属性
+        // function equal(a,b){
+        //     if(Math.abs(a-b)<Number.EPSILON){
+        //         return true
+        //     }else{
+        //         return false
+        //     }
+        // }
+        // console.log(01+02 ===0.3);
+        // console.log(equal(0.1+0.2,0.3));
+        // // 二进制
+        // let b = 0b1010
+        // let o = 0o777
+        // // 十进制
+        // let d = 100
+        // let x = 0xff
+
+        // console.log(Number.isFinite(100));
+        // console.log(Number.isFinite(100/0));
+        // console.log(Number.isFinite(Infinity));
+
+
+
+        // const proto = {
+        //     foo :'嘿嘿'
+        // }
+        // const obj ={
+        //     foo:'啦啦',
+        //     find(){
+        //         return super.foo
+        //     },
+        // }
+        // Object.setPrototypeOf(obj,proto)
+        // console.log(obj.find());
+        // obj.find()
+
+        // const proto = {
+        //     foo :'嘿嘿'
+        // }
+        // const obj ={
+        //     foo:'啦啦',
+        //     find(){
+        //         return super.foo
+        //     },
+        // }
+        // Object.setPrototypeOf(obj,proto)
+        // console.log(obj.find());
+        // obj.find()
+
+        // const proto = {
+        //     foo :'嘿嘿'
+        // }
+        // const obj ={
+        //     foo:'啦啦',
+        //     find(){
+        //         return super.foo
+        //     },
+        // }
+        // Object.setPrototypeOf(obj,proto)
+        // console.log(obj.find());
+        // obj.find()
+
+
+
+        // let obj1 = new Proxy({},{
+        //     get:function(target,key,receiver){
+        //         console.log(`获取当前 ${key}!`);
+        //         return Reflect.get(target,key,receiver)
+        //     },
+        //     set:function(target,key,value,receiver){
+        //         // console.log(target);
+        //         console.log(`设置当前${key}`);
+        //         return Reflect.set(target,key,value,receiver)
+        //     }
+        // })
+        // obj1.count = 1
+        // ++obj1.count
+        // console.log(obj1);
+
+        // let obj1 = new Proxy({},{
+        //     get:function(target,key,receiver){
+        //         console.log(`获取当前 ${key}!`);
+        //         return Reflect.get(target,key,receiver)
+        //     },
+        //     set:function(target,key,value,receiver){
+        //         // console.log(target);
+        //         console.log(`设置当前${key}`);
+        //         return Reflect.set(target,key,value,receiver)
+        //     }
+        // })
+        // obj1.count = 1
+        // ++obj1.count
+        // console.log(obj1);
+
+        let obj1 = new Proxy({},{
+            get:function(target,key,receiver){
+                console.log(`获取当前 ${key}!`);
+                return Reflect.get(target,key,receiver)
+            },
+            set:function(target,key,value,receiver){
+                // console.log(target);
+                console.log(`设置当前${key}`);
+                return Reflect.set(target,key,value,receiver)
+            }
+        })
+        obj1.count = 1
+        ++obj1.count
+        console.log(obj1);
+    </script>
+</body>
+</html>
