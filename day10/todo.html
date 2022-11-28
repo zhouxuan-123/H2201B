@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300); 
+        h3{
+            font-family: "Yanone Kaffeesatz", sans-serif !important; 
+        } 
+        body{
+            background-image: linear-gradient(to right,#FFAFBD,#FFB9AF,#FFC3A1);
+        }
+        .daBox{
+            text-align: center;
+            padding: 20px;
+            width: 360px;
+            height: 100%;
+            background-color: #F2F2F2;
+            border-radius: 10px;
+            margin: 11% 38%;
+        }
+        .imgBox{
+            text-align: center;
+        }
+        img{
+            width: 150px;
+            height: 80px;
+        }
+        .inBox{
+            border-bottom: 2px dashed #EA7A52;
+            width: 200px;
+            display: flex;
+            text-align: center;
+            margin-left: 50px;
+        }
+        .inpuBox{
+            outline: none;
+            width: 200px;
+            border: none;
+            background-color: #F2F2F2;
+        }
+        .btBox{
+            margin-left: 50px;
+            transform: rotate(5deg);
+            /* box-shadow: 0px 0px 2px 0PX black; */
+            box-shadow:4px 4px 5px black;
+        }
+        .chBox{
+            padding: 0px 10px;
+            width: 300px;
+            display: flex;
+            margin-left: 30px;
+            margin-top: 20px;
+            /* text-align: center; */
+            justify-content: space-between;
+            /* background-color: pink; */
+        }
+        .imggBox{
+            margin-left: 50px;
+            width: 80px;
+            height: 50px;
+        }
+        .cBox{
+            color: #B7B8B8;
+        }
+
+ul{
+  margin: 0px;
+  padding: 0px;
+}
+  ul li{
+    list-style: none;
+    /*text-align: center;*/
+    position: relative;
+    padding-left:40px;
+    height: 40px;
+    line-height: 40px;
+  }
+  ul li:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+  ul li:hover{
+  cursor: pointer;
+  background-color: #dddddd;
+}
+ 
+  ul li.check{
+    margin-top: 10px;
+    border-radius: 10px;
+  background-color: #FE7246;
+  text-decoration: line-through;
+  color: #f9f9f9;
+}
+  ul li.check::before{
+ 
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+ 
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+/* .close{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  padding: 0px 20px;
+  font-size: 16px;
+}
+.close:hover{
+  background-color: #f44336;
+  color: white;
+} */
+    </style>
+</head>
+<body>
+    <div class="daBox">
+        <div class="imgBox">
+            <img src="./微信图片_20221126183820.png" alt="">
+        </div>
+        <h3>-Today need to-</h3>
+        <div class="inBox">
+            <input class="inpuBox" type="text" placeholder="Add new todo..." id="things">
+            <span id="add" onclick="addElement()"><img class="imggBox" src="./微信图片_20221126215015.png" alt=""></span>
+        </div>
+        <!-- <div class="chBox" id="ul">
+            <div class="iiBox">
+                <input type="checkbox" name="" id="">
+                <span id="span">111</span>
+            </div>
+            <div>x</div>
+        </div> -->
+        <ul></ul>
+        <div class="test2"></div>
+        <div class="cBox">
+            <p>Congrat,you have no more tasks to do</p>
+            <!-- <div class="activemin">
+                <span>未完成：<span  class="first"></span></span>
+                <span>所有任务</span>
+                <span>已完成任务</span>
+                <span>未完成任务</span>
+            </div> -->
+        </div>
+    </div>
+</body>
+<script>
+    // var inp = document.getElementById('inp')
+    // var ul = document.getElementById('ul')
+    // var ulSpan = document.getElementById('span')
+    // inp.onkeydown = function(){
+    //     ulSpan.innerHTML = inp.value
+    //     ul.insertBefore()
+    // }
+    var myNodelist=document.getElementsByTagName("li")
+ 
+for (var i=0;i<myNodelist.length;i++)
+{
+  var span=document.createElement("span");
+ 
+  var txt=document.createTextNode("\u00D7");
+ 
+  span.className="close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+ 
+}
+ 
+//2.处理删除事件
+var close=document.getElementsByClassName("close")
+for (var i=0;i<close.length;i++)
+{
+  close[i].onclick=function () {
+    //parentElement表示返回当前节点的父元素节点
+    var div=this.parentElement
+    div.style.display="none"
+  }
+}
+ 
+//3.处理任务完成事件
+var list=document.querySelector("ul")
+console.log(list)
+list.addEventListener('click',function (ev) {
+//event.target属性可以用来实现事件委托，例如将事件绑定在ul上，但是点击li时可以被触发
+  //tagName是获取元素的标签名
+  if (ev.target.tagName === 'LI')
+{
+  //toggle方法在被选元素上进行hide（）和show（）之间的切换
+  //classList对元素的class继续操作
+  ev.target.classList.toggle('check')
+}
+},false);
+ 
+//4.处理点击add按钮，列表中添加一个待办事项
+ 
+function addElement(){
+  var things=document.getElementById('things').value
+ 
+ // alert(localStorage.setItem("mutodolist",JSON.stringify(things)))
+ 
+  var li=document.createElement('li')
+ 
+  var t=document.createTextNode(things)
+ 
+  if (things == '')
+  {
+    alert("请输入待办事件")
+  }
+  else
+  {
+    list.appendChild(li)
+    li.appendChild(t)
+  }
+ 
+  var span=document.createElement('span')
+  var txt=document.createTextNode('\u00D7')
+ 
+  span.className='close'
+  span.appendChild(txt)
+  li.appendChild(span)
+ 
+  for (var i=0;i<close.length;i++)
+  {
+    close[i].onclick=function () {
+      var div=this.parentElement
+      div.style.display="none"
+    }
+  }
+}
+</script>
+</html>
