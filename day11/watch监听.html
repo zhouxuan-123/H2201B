@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <!-- <div id="app">
+        <div>我的姓是：<input type="text" v-model="name"></div>
+        <div>我的名是：<input type="text" v-model="names"></div>
+        <div>我的姓名：<input type="text" v-model="namess"></div>
+    </div> -->
+    <!-- <div id="app">
+        <div>我的姓是：<input type="text" v-model="name"></div>
+        <div>我的名是：<input type="text" v-model="names"></div>
+        <div>我的姓名：<input type="text" v-model="namess"></div>
+    </div> -->
+    <!-- <div id="app">
+        <div>我的姓是：<input type="text" v-model="name"></div>
+        <div>我的名是：<input type="text" v-model="names"></div>
+        <div>我的姓名：<input type="text" v-model="namess"></div>
+    </div> -->
+    <script>
+        
+        // new Vue({
+        //     el:"#app",
+        //     data:{
+        //             name:"周",
+        //             names:"璇",
+        //             namess:"周璇"
+        //         },
+        //         computed:{
+        //             propName:{
+        //                 get(){
+        //                     return this.name + '-'+ this.names
+        //                 },
+        //                 set(value){
+        //                     let arr = value.split('-')
+        //                     this.name = arr[0]
+        //                     this.names = arr[1]
+        //                 }
+        //             }
+        //         }
+        // })
+        // let hope = '啊啊啊啊啊啊'
+        // let person = {
+        //     name:"嗯嗯",
+        //     age:11,
+        // }
+        // Object.defineProperty(person,'hope',{
+        //     get:function(){
+        //         console.log('哈哈哈哈哈');
+        //         return hope
+        //     },
+        //     set(value){
+        //         hope = value
+        //         console.log('嘿嘿嘿',value);
+        //     }
+        // })
+        // console.log(person);
+        // console.log(Object.keys(person));
+        // console.log(Object.values(person));
+
+        // computed:{
+        //     fullName:{
+        //         get:function(){
+        //             console.log('我是被读取的');
+        //             return this.fullName + '-' + this.lastName
+        //             setTimeout(function(){
+        //                 console.log('我是能被读取的');
+        //             },1000)
+        //         },
+        //         set:function(val){
+        //             console.log('我是被设置的');
+        //             let result = val.split('-')
+        //             this.firstName = result[0]
+        //             this.lastName = result[1]
+        //         }
+        //     }
+        //     fullName(){
+        //         console.log('我是被读取的');
+        //         return this.firsNmae + '-' + this.lastName
+        //     }
+        // }
+
+        // new Vue({
+        //     el:"#app",
+        //     data:{
+        //             name:"周",
+        //             names:"璇",
+        //             namess:"周璇"
+        //         },
+        //         computed:{
+        //             propName:{
+        //                 get(){
+        //                     return this.name + '-'+ this.names
+        //                 },
+        //                 set(value){
+        //                     let arr = value.split('-')
+        //                     this.name = arr[0]
+        //                     this.names = arr[1]
+        //                 }
+        //             }
+        //         }
+        // })
+        // let hope = '啊啊啊啊啊啊'
+        // let person = {
+        //     name:"嗯嗯",
+        //     age:11,
+        // }
+        // Object.defineProperty(person,'hope',{
+        //     get:function(){
+        //         console.log('哈哈哈哈哈');
+        //         return hope
+        //     },
+        //     set(value){
+        //         hope = value
+        //         console.log('嘿嘿嘿',value);
+        //     }
+        // })
+        // console.log(person);
+        // console.log(Object.keys(person));
+        // console.log(Object.values(person));
+
+        // computed:{
+        //     fullName:{
+        //         get:function(){
+        //             console.log('我是被读取的');
+        //             return this.fullName + '-' + this.lastName
+        //             setTimeout(function(){
+        //                 console.log('我是能被读取的');
+        //             },1000)
+        //         },
+        //         set:function(val){
+        //             console.log('我是被设置的');
+        //             let result = val.split('-')
+        //             this.firstName = result[0]
+        //             this.lastName = result[1]
+        //         }
+        //     }
+        //     fullName(){
+        //         console.log('我是被读取的');
+        //         return this.firsNmae + '-' + this.lastName
+        //     }
+        // }
+
+        // new Vue({
+        //     el:"#app",
+        //     data:{
+        //             name:"周",
+        //             names:"璇",
+        //             namess:"周璇"
+        //         },
+        //         computed:{
+        //             propName:{
+        //                 get(){
+        //                     return this.name + '-'+ this.names
+        //                 },
+        //                 set(value){
+        //                     let arr = value.split('-')
+        //                     this.name = arr[0]
+        //                     this.names = arr[1]
+        //                 }
+        //             }
+        //         }
+        // })
+        // let hope = '啊啊啊啊啊啊'
+        // let person = {
+        //     name:"嗯嗯",
+        //     age:11,
+        // }
+        // Object.defineProperty(person,'hope',{
+        //     get:function(){
+        //         console.log('哈哈哈哈哈');
+        //         return hope
+        //     },
+        //     set(value){
+        //         hope = value
+        //         console.log('嘿嘿嘿',value);
+        //     }
+        // })
+        // console.log(person);
+        // console.log(Object.keys(person));
+        // console.log(Object.values(person));
+
+        // computed:{
+        //     fullName:{
+        //         get:function(){
+        //             console.log('我是被读取的');
+        //             return this.fullName + '-' + this.lastName
+        //             setTimeout(function(){
+        //                 console.log('我是能被读取的');
+        //             },1000)
+        //         },
+        //         set:function(val){
+        //             console.log('我是被设置的');
+        //             let result = val.split('-')
+        //             this.firstName = result[0]
+        //             this.lastName = result[1]
+        //         }
+        //     }
+        //     fullName(){
+        //         console.log('我是被读取的');
+        //         return this.firsNmae + '-' + this.lastName
+        //     }
+        // }
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- <h2>人员列表</h2>
+        <ul>
+            <li v-for="(item,index) of persons" :key="index">
+                {{item.name}}=={{item.age}}
+                <input type="text">
+            </li>
+        </ul>
+        <h2>汽车信息</h2>
+        <ul>
+            <li v-for="(value,k) of car" :key="k">
+                {{k}}-{{value}}
+            </li>
+        </ul>
+        <h2>遍历字符串</h2> -->
+        <!-- <h2>人员列表</h2>
+        <ul>
+            <li v-for="(item,index) of persons" :key="index">
+                {{item.name}}=={{item.age}}
+                <input type="text">
+            </li>
+        </ul>
+        <h2>汽车信息</h2>
+        <ul>
+            <li v-for="(value,k) of car" :key="k">
+                {{k}}-{{value}}
+            </li>
+        </ul>
+        <h2>遍历字符串</h2> -->
+        <h2>人员列表</h2>
+        <ul>
+            <li v-for="(item,index) of persons" :key="index">
+                {{item.name}}=={{item.age}}
+                <input type="text">
+            </li>
+        </ul>
+        <h2>汽车信息</h2>
+        <ul>
+            <li v-for="(value,k) of car" :key="k">
+                {{k}}-{{value}}
+            </li>
+        </ul>
+        <h2>遍历字符串</h2>
+    </div>
+    <script>
+        // new Vue({
+        //     el:"#app",
+        //     data:{
+        //         persons:[
+        //             {id:"1",name:"啊啊",age:11},
+        //             {id:"2",name:"好好",age:22},
+        //             {id:"3",name:"嗯嗯",age:33},
+        //         ]
+        //     }
+        // })
+        // new Vue({
+        //     el:"#app",
+        //     data:{
+        //         persons:[
+        //             {id:"1",name:"啊啊",age:11},
+        //             {id:"2",name:"好好",age:22},
+        //             {id:"3",name:"嗯嗯",age:33},
+        //         ]
+        //     }
+        // })
+        new Vue({
+            el:"#app",
+            data:{
+                persons:[
+                    {id:"1",name:"啊啊",age:11},
+                    {id:"2",name:"好好",age:22},
+                    {id:"3",name:"嗯嗯",age:33},
+                ]
+            }
+        })
+    </script>
+</body>
+</html>
