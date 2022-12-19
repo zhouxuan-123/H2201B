@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="c" width="300" height="300" style="border: 1px solid #ccc"></canvas>
+    <script>
+        const cnv = document.getElementById('c')
+        const cxt = cnv.getContext('2d')
+        cxt.moveTo(200,0)
+        cxt.lineTo(200,400)
+        cxt.strokeStyle = 'red'
+        cxt.stroke()
+        cxt.font = '30px Arial'
+        cxt.textAlign = 'start'
+        cxt.fillText('哈哈 end',200,40)
+        
+        cxt.textAlign = 'end'
+        cxt.fillText('哈哈 end',200,100)
+
+        cxt.textAlign = 'left'
+        cxt.fillText('哈哈 left',200,160)
+
+        cxt.textAlign = 'right'
+        cxt.fillText('哈哈 right',200,220)
+
+        cxt.textAlign = 'center'
+        cxt.fillText('哈哈 center',200,280)
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="c" width="300" height="300" style="border: 1px solid #ccc"></canvas>
+    <script>
+        const cnv = document.getElementById('c')
+        const cxt = cnv.getContext('2d')
+        cxt.fillStyle = 'pink'
+        cxt.moveTo(50,50)
+        cxt.lineTo(200,50)
+        cxt.setLineDash([10])
+        cxt.stroke()
+        cxt.beginPath()
+        cxt.moveTo(50,100)
+        cxt.lineTo(200,100)
+        cxt.setLineDash([10,20])
+        cxt.stroke()
+        cxt.beginPath()
+        cxt.moveTo(50,150)
+        cxt.lineTo(200,150)
+        cxt.setLineDash([10,20,5])
+        cxt.stroke()
+    </script>
+</body>
+</html>

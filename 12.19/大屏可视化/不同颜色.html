@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="c" width="300" height="300" style="border: 1px solid #ccc"></canvas>
+    <script>
+        const cnv = document.getElementById('c')
+        const cxt = cnv.getContext('2d')
+        cxt.moveTo(20,100)
+        cxt.lineTo(200,100)
+        // 宽度)
+        cxt.lineWidth = 10
+        // 颜色
+        cxt.strokeStyle = 'pink'
+        cxt.stroke()
+
+        cxt.moveTo(20,120.5)
+        cxt.lineTo(200,120.5)
+        cxt.lineWidth = 4
+        cxt.strokeStyle = 'red'
+        cxt.stroke()
+    </script>
+</body>
+</html>
