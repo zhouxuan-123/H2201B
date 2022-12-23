@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./lib/echarts.min.js"></script>
+    <script src="./js/jquery.js"></script>
+</head>
+<body>
+    <div style="width:600px;height:400px;border:1px solid red"></div>
+    <script>
+        var mEcharts = echers.init(document.querySelector('div'))
+        $.get('./data/中华人民共和国.json',function(ret){
+            console.log(ret,'ret');
+            echers.registerMap('chinaMap',ret)
+            var option = {
+                geo:{
+                    type:'map',
+                    map:"chinaMap",
+                    roma:true,
+                    zoom:1,
+                }
+            }
+            mEcharts.setOption(option)
+        })
+    </script>
+</body>
+</html>
