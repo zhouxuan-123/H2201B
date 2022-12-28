@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 通过{}创建对象
+        'use strict'; //使用strict模式
+ 
+        /**
+        使用{}创建对象，等同于 new Object();
+        **/
+        // var o = {};
+ 
+        // o.name = 'jack';
+        // o.age = 20;
+ 
+        // o.sayName = function(){
+        //     alert(this.name);
+        // }
+ 
+        // alert(o.name+'-'+o.age);
+ 
+        // o.sayName();
+
+
+        // 通过new Object()创建对象
+        // 'use strict';
+        // // 使用 new Object() 创建对象
+        // var o = new Object();
+        // o.name = "zhangsna";
+        // o.sayName = function(){
+        //     alert(this.name);
+        // }
+ 
+        // o.sayName();
+ 
+        // alert('o instanceof Object>>>>>>>>>>>'+(o instanceof Object));//true
+        // alert("typeof o >>>>> "+typeof o);//object
+
+
+
+        // 使用字面量创建对象
+        // var person = {
+        //     name: 'zhang', 
+        //     age:20
+        // }
+
+
+
+        // 使用工厂模式创建对象
+        // 'use strict';
+ 
+        // // 使用工厂模式创建对象
+        // // 定义一个工厂方法
+        // function createObject(name){
+        //     var o = new Object();
+        //     o.name = name;
+        //     o.sayName = function(){
+        //         alert(this.name);
+        //     };
+        //     return o;
+        // }
+ 
+        // var o1 = createObject('zhang');
+        // var o2 = createObject('li');
+ 
+        // //缺点：调用的还是不同的方法
+        // //优点：解决了前面的代码重复的问题
+        // alert(o1.sayName===o2.sayName);//false
+
+
+
+        // 通过构造函数创建对象
+        'use strict';
+ 
+        /**
+         *  构造函数模式创建对象
+         **/
+        function Person(name){
+            this.name = name;
+            this.sayName = function(){
+                alert(this.name);
+            };
+        }
+ 
+        var p1 = new Person('zhang');
+        var p2 = new Person('li');
+ 
+        p1.sayName();
+        p2.sayName();
+ 
+        alert(p1.constructor === p2.constructor);//true
+        alert(p1.constructor === Person);//true
+ 
+        alert(typeof(p1));//object
+ 
+        alert(p1 instanceof Object); //true
+        alert(p2 instanceof Object); //trueb
+ 
+        alert(p1.sayName===p2.sayName);//false
+    </script>
+</body>
+</html>
